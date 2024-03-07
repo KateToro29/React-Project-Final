@@ -1,30 +1,21 @@
-//import { useState } from 'react'
-import Api from './Api/Api'
-import './App.css'
+import Navbar from "./components/Nav/Nav";
+import Title from "./components/Title/Title";
+import UserInfoList from "./components/UserInfoList/UserInfoList";
 
-import Navbar from './components/Nav/Nav'
-import Targets from './components/Targets/Targets'
-//import Targets from './components/Targets/Targets'
-import Title from './components/Title/Title'
-
-
+import "./App.css";
 function App() {
-  //const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar></Navbar>
       <Title>{Title.Favorites}</Title>
-      <div className='ContainerPrincipalCards'>
+      <div className="ContainerPrincipalCards">
         <Title>{Title.Favorites}</Title>
         <div>
-          <Api></Api>
+          <UserInfoList />
         </div>
-        
-        
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
