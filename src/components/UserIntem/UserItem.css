@@ -1,0 +1,12 @@
+.ContainerTarget {
+    background-color: white;
+    border-style: solid;
+    padding: 3px;
+    border-color: rgb(248, 246, 246);
+    border-radius: 7px;
+    width: 200px;
+    margin: 4px;
+    padding: 8px;
+    
+    
+  }
