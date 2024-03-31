@@ -6,17 +6,13 @@ import { useSelector } from 'react-redux'
 
 import './UserInfoList.css'
 
-export default function UserInfoList() {
-  const usersList = useSelector((state) => state.value)
-
-
-
+export default function UserInfoList(props) {
   return (
     <>
-      {usersList.length > 0 ? (
+      {props.list?.length > 0 ? (
         <div className="ContainerCardpresent">
-          {usersList.map((user) => (
-            <UserItem key={user.id} user={user} />
+          {props.list.map((user) => (
+            <UserItem key={user.id} user={user} showDeleteButton={props.showDeleteButton} />
           ))}
         </div>
       ) : (

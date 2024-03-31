@@ -1,32 +1,25 @@
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Nav/Nav";
-//import UserInfoList from "../../components/UserInfoList/UserInfoList";
+import UserInfoList from "../../components/UserInfoList/UserInfoList";
 import { useSelector } from 'react-redux'
 import { UserItem } from "../../components/UserIntem/UserItem";
-import UserInfoList from "../../components/UserInfoList/UserInfoList";
+import Title from "../../components/Title/Title";
 
 
-export const Favorites = () => {
+export const Favorites = (props) => {
   const usersList = useSelector((state) => state.value);
   const [favoriteUsers, setFavoriteUsers] = useState([]);
 
   useEffect(()=> {
     const filtrados = usersList.filter(u => u.resolved === true);
+    console.log(filtrados)
     setFavoriteUsers(filtrados)
   }, [usersList]);
 
 
   return <div>
-    <Navbar></Navbar>
-    {favoriteUsers.length > 0 ? (
-        <div className="ContainerCardpresent">
-          {favoriteUsers.map((user) => (
-            <UserItem key={user.id} user={user} />
-          ))}
-         
-        </div>
-      ) : (
-        <p>No tienes contactos favoritos</p>
-      )}
+    {!props.isOverView && <Navbar></Navbar>}
+    <Title Title="Favorite"></Title>
+    { favoriteUsers &&     <UserInfoList showDeleteButton={false} list={favoriteUsers}></UserInfoList>}
   </div>;
 };

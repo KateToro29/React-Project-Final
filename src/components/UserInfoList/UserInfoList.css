@@ -1,7 +1,7 @@
 
 .ContainerCardpresent {
   display: flex;
-  width: max-content;
+  width: 100vw;
 
 }
 Span {

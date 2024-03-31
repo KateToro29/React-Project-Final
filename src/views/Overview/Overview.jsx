@@ -2,18 +2,14 @@ import { useSelector } from 'react-redux'
 import Title from '../../components/Title/Title';
 import UserInfoList from '../../components/UserInfoList/UserInfoList';
 import Navbar from '../../components/Nav/Nav';
+import { Favorites } from '../Favorites/Favorites';
+import { Contacts } from '../Contacts/Contacts';
 
 
 export const Overview = () => {
-  const usersList = useSelector((state) => state.value)
-
   return <div>
     <Navbar></Navbar>
-     <Title/>
-      <div className="ContainerPrincipalCards">
-        <div>
-          <UserInfoList />
-        </div>
-      </div>
+     <Favorites isOverView={true}></Favorites>
+     <Contacts isOverView={true}></Contacts>
   </div>;
 };

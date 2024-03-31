@@ -1,9 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import Image from "../../Image/Logo.png";
 import "./Nav.css";
+import { useState } from "react";
+import { NewContact } from "../../views/NewContact/NewContact";
 
 export default function Navbar() {
-  const navigate = useNavigate();
+  const [showForm, setShowForm] = useState(false);
+  
   return (
     <>
       <div className="ContainerNav">
@@ -14,18 +17,20 @@ export default function Navbar() {
           <Link to={`/overview`} className="a">
             Overview
           </Link>
-          <Link to={`/favorites`} className="a">
-            Favorites
-          </Link>
+          
           <Link to={`/contacts`} className="a">
             Contacts
           </Link>
-          <button className="buttonNEW" onClick={() => navigate("/newContact")}>
+          <Link to={`/favorites`} className="a">
+            Favorites
+          </Link>
+          <button className="buttonNEW" onClick={() => setShowForm(!showForm)}>
             {" "}
             + New
           </button>
         </div>
       </div>
+      {showForm && <NewContact></NewContact>}
       <hr />
     </>
   );

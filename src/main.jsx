@@ -20,7 +20,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Overview />,
   },
   {
     path: "/overview",
@@ -33,10 +33,6 @@ const router = createBrowserRouter([
   {
     path: "/favorites",
     element: <Favorites />,
-  },
-  {
-    path: "/newContact",
-    element: <NewContact />,
   },
 ]);
 

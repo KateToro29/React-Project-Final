@@ -1,4 +1,9 @@
-h1{
-    color: black;
-    background-color: aqua;
+.titleParent{
+    justify-content: space-around; 
 }
+
+.title{
+    color: black;
+    text-align: left;
+}
+

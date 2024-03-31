@@ -51,7 +51,6 @@ export const NewContact = () => {
 
   return (
     <>
-      <Navbar></Navbar>
       <form className="form" onSubmit={handleSubmit}>
         <div className="containerCampos">
           <input

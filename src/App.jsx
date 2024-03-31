@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Title>{Title.Favorites}</Title>
+     
       <div className="ContainerPrincipalCards">
-        <Title>{Title.Favorites}</Title>
+        <Title Title="Favorites"></Title>
         <div>
           <UserInfoList />
         </div>

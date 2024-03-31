@@ -1,11 +1,13 @@
 import './ButtonRemove.css'
-export default function ButtonRemove(){
-    const handleClick = () => {
-        console.log('Elemento Eliminado');
+import {store, removeUser} from './../../store'
+export default function ButtonRemove(props){
+    const handleClick = (userId) => {
+        console.log('Elemento Eliminado' + userId);
+        store.dispatch(removeUser(userId))
     }
     return(
         <>
-            <button className='ButtonRemove' onClick={handleClick}>X REMOVE</button>
+            <button className='ButtonRemove' onClick={() => handleClick(props.userId)}>X REMOVE</button>
         </>
     )
 }

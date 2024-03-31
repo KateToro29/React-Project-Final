@@ -41,6 +41,21 @@ const UserSlice = createSlice({
       state.value.push(payload)
       return state;
     },
+    removeUser: (state, {payload}) => {
+      state.value = state.value.filter(u => u.id !== payload)
+      return state;
+    },
+    changeFavorite: (state, {payload}) => {
+      state.value = state.value.map(u => {
+        if(u.id === payload.userId){
+          u.resolved = payload.favorite
+        }
+
+        return u;
+
+      })
+      return state;
+    },
    /*DeleteFavorites:(state,{payload})=>{
     
 
@@ -49,7 +64,7 @@ const UserSlice = createSlice({
   }
 })
 
-export const { addUser,defineInitialList } = UserSlice.actions
+export const { addUser,defineInitialList , removeUser,changeFavorite} = UserSlice.actions
 
 export const store = configureStore({
   reducer: UserSlice.reducer,
