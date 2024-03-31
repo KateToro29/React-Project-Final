@@ -15,3 +15,7 @@ Span {
   border-color: #c1d72f;
   border-style: solid;
 }
+
+.pagination{
+  text-align: right;
+}
