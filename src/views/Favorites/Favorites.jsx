@@ -17,9 +17,11 @@ export const Favorites = (props) => {
   }, [usersList]);
 
 
-  return <div>
-    {!props.isOverView && <Navbar></Navbar>}
-    <Title Title="Favorite"></Title>
-    { favoriteUsers &&     <UserInfoList showDeleteButton={false} list={favoriteUsers} itemsPerPage={4}></UserInfoList>}
-  </div>;
+  return <>
+    <div>
+      {!props.isOverView && <Navbar></Navbar>}
+      <Title Title="Favorite"></Title>
+      { favoriteUsers &&     <UserInfoList showDeleteButton={false} list={favoriteUsers} itemsPerPage={4}></UserInfoList>}
+    </div>;
+  </> 
 };

@@ -6,6 +6,7 @@
   margin: 10px;
   padding: 8px;
   box-sizing: border-box;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .ContainerCardpresent .ContainerTarget {
@@ -13,7 +14,7 @@
 }
 
 .ContainerCardpresent > .ContainerTarget:nth-child(n+4) {
-  margin-top: 10px; /* Aplicamos margen superior desde el cuarto elemento */
+  margin-top: 10px; 
 }
 
 .ContainerCardpresent > .ContainerTarget:nth-child(n+4):nth-child(-n+6) {

@@ -4,17 +4,24 @@
   padding: 0.5rem;
   text-align: center;
 }
-.ContainerPrincipalCards{
+
+.ContainerPrincipalCards {
   display: flex;
   flex-wrap: wrap;
   max-width: 1380px;
-  margin-top: 20px;
+  margin-top: 70px; 
+  justify-content: center; 
 }
 
 
 .card {
   padding: 2em;
+  flex: 1; 
+  min-width: 250px; 
+  margin: 10px; 
+  box-sizing: border-box; 
 }
+
 
 .read-the-docs {
   color: #888;
