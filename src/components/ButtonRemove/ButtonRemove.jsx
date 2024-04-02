@@ -7,7 +7,7 @@ export default function ButtonRemove(props){
     }
     return(
         <>
-            <button className='ButtonRemove' onClick={() => handleClick(props.userId)}>X REMOVE</button>
+            <button className='ButtonRemove' onClick={() => handleClick(props.userId)}>X </button>
         </>
     )
 }

@@ -60,8 +60,6 @@ export const NewContact = () => {
             value={formData.FirstName}
             onChange={handleChange}
             required
-            minLength="6"
-            maxLength="18"
             placeholder="First name"
           />
         </div>
@@ -73,8 +71,6 @@ export const NewContact = () => {
             value={formData.LastName}
             onChange={handleChange}
             required
-            minLength="6"
-            maxLength="18"
             placeholder="Last name"
           />
         </div>
@@ -86,8 +82,6 @@ export const NewContact = () => {
             value={formData.Email}
             onChange={handleChange}
             required
-            minLength="6"
-            maxLength="18"
             placeholder="Email"
           />
         </div>

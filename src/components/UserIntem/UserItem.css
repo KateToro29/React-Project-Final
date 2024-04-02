@@ -1,12 +1,37 @@
 .ContainerTarget {
-    background-color: white;
-    border-style: solid;
-    padding: 3px;
-    border-color: rgb(248, 246, 246);
-    border-radius: 7px;
-    width: 200px;
-    margin: 4px;
-    padding: 8px;
-    
-    
+  background-color: white;
+  border: solid 1px rgb(222, 220, 220);
+  border-radius: 7px;
+  width: calc(30% - 20px); /* Reducimos el ancho para mostrar tres elementos por fila */
+  margin: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ContainerCardpresent .ContainerTarget {
+  margin-right: 10px;
+}
+
+.ContainerCardpresent > .ContainerTarget:nth-child(n+4) {
+  margin-top: 10px; /* Aplicamos margen superior desde el cuarto elemento */
+}
+
+.ContainerCardpresent > .ContainerTarget:nth-child(n+4):nth-child(-n+6) {
+  margin-top: 0; 
+}
+
+.ContainerCardpresent > .ContainerTarget:nth-child(n+4):nth-child(-n+6) ~ .ContainerTarget:first-child {
+  margin-right: auto; 
+}
+
+@media (max-width: 768px) {
+  .ContainerTarget {
+    width: calc(45% - 20px); /* Ancho más amplio para dispositivos de menor tamaño */
   }
+}
+
+@media (max-width: 480px) {
+  .ContainerTarget {
+    width: calc(100% - 20px); /* Ancho completo para dispositivos pequeños */
+  }
+}

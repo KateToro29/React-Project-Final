@@ -3,7 +3,7 @@ import { UserItem } from "../UserIntem/UserItem";
 import './UserInfoList.css'
 
 export default function UserInfoList(props) {
-  const itemByPage = 3;
+  const itemByPage = props.itemsPerPage;
   const [actualPage, setActualPage] = useState(1);
   const [pages, setPages] = useState(0);
   const [listSlice, setListSlice] = useState([])

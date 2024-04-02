@@ -5,7 +5,7 @@ import './UserItem.css'
 
 export const UserItem = ({ user, showDeleteButton }) => {
   return (
-    <div className="ContainerTarget" key={user.id}>
+    <div className="ContainerTarget  " key={user.id}>
       <img className="Image" src={user.avatar} alt="" />
       <p>
         {user.first_name} {user.last_name}

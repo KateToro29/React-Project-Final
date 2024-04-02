@@ -1,9 +1,20 @@
-.titleParent{
-    justify-content: space-around; 
-}
-
-.title{
+.titleWithLine {
+    display: flex; /* Utilizamos flexbox para alinear horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
     color: black;
-    text-align: left;
-}
+    font-size: 10px;
+  }
+  
+  .title {
+    margin: 0; /* Elimina el margen predeterminado del título */
+  }
+  
+  .greenLine {
+    width: 100%; /* La línea verde ocupa todo el ancho disponible */
+    height: 2px; /* Grosor de la línea */
+    background-color: #C1D72F; /* Color de la línea */
+    margin-left: 10px; /* Espacio entre el título y la línea verde */
+    border-style:none;
 
+  }
+  

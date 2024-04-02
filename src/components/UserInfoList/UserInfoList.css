@@ -1,9 +1,11 @@
 
 .ContainerCardpresent {
-  display: flex;
   width: 100vw;
-
+  display: flex; /* Hace que los elementos hijos se comporten como elementos flexibles */
+  flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan en múltiples líneas si no caben en una sola */
+  justify-content: flex-start;
 }
+
 Span {
   color: rgb(108, 106, 106);
 }
