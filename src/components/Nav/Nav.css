@@ -12,6 +12,7 @@
     padding: 10px 20px;
     box-sizing: border-box;
     z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   }
   
  

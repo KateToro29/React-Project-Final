@@ -8,10 +8,11 @@
   
   .title {
     margin: 0; 
+    font-size: 25px;
   }
   
   .greenLine {
-    width: 100%; 
+    width: 89%; 
     height: 2px; 
     background-color: #C1D72F; 
     margin-left: 10px; 

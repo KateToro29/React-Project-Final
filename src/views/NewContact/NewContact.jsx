@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Style.css";
-import {store, addUser} from './../../store'
+import { store, addUser } from './../../store'
 import { useSelector } from 'react-redux'
 import Navbar from "../../components/Nav/Nav";
 

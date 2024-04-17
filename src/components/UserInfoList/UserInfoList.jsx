@@ -52,7 +52,7 @@ export default function UserInfoList(props) {
           </div>
         </div>
       ) : (
-        <p>Cargando datos...</p>
+        <p>There are no Contacts......</p>
       )}
     </>
   );

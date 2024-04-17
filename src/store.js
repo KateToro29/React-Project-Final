@@ -1,4 +1,4 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit'
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 // convert object to string and store in localStorage
 /*function saveToLocalStorage(state) {
@@ -23,13 +23,13 @@ import { createSlice, configureStore } from '@reduxjs/toolkit'
     }
   }*/
 
-const UserSlice = createSlice({
+const userSlice = createSlice({
   name: 'User',
   initialState: {
     value: []
   },
   reducers: {
-    defineInitialList: (state, {payload}) => {
+    defineInitialList: (state, { payload }) => {
       console.log('definiendo la lista inicial')
       state.value = payload.map(u => {
         u.resolved = false;
@@ -37,17 +37,17 @@ const UserSlice = createSlice({
       })
       return state;
     },
-    addUser: (state, {payload}) => {
+    addUser: (state, { payload }) => {
       state.value.push(payload)
       return state;
     },
-    removeUser: (state, {payload}) => {
+    removeUser: (state, { payload }) => {
       state.value = state.value.filter(u => u.id !== payload)
       return state;
     },
-    changeFavorite: (state, {payload}) => {
+    changeFavorite: (state, { payload }) => {
       state.value = state.value.map(u => {
-        if(u.id === payload.userId){
+        if (u.id === payload.userId) {
           u.resolved = payload.favorite
         }
 
@@ -56,20 +56,20 @@ const UserSlice = createSlice({
       })
       return state;
     },
-   /*DeleteFavorites:(state,{payload})=>{
-    
+    /*DeleteFavorites:(state,{payload})=>{
+     
+ 
+       })*/
 
-      })*/
-    
   }
 })
 
-export const { addUser,defineInitialList , removeUser,changeFavorite} = UserSlice.actions
+export const { addUser, defineInitialList, removeUser, changeFavorite } = userSlice.actions
 
 export const store = configureStore({
-  reducer: UserSlice.reducer,
- // preloadedState: loadFromLocalStorage()
-})
+  reducer: userSlice.reducer,
+  // preloadedState: loadFromLocalStorage()
+});
 
 // listen for store changes and use saveToLocalStorage to
 // save them to localStorage
