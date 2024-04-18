@@ -1,13 +1,9 @@
-import { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
+import { addUser, store } from "./../../store";
 import "./Style.css";
-import { store, addUser } from './../../store'
-import { useSelector } from 'react-redux'
-import Navbar from "../../components/Nav/Nav";
 
 export const NewContact = () => {
-  const usersList = useSelector((state) => state.value)
-
   const [formData, setFormData] = useState({
     FirstName: "",
     LastName: "",
@@ -26,17 +22,19 @@ export const NewContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(formData)
+      console.log(formData);
       await axios.post("https://reqres.in/api/users", formData);
       alert("Contacto creado exitosamente");
-      store.dispatch(addUser({
-        id: Math.random() * 1000,
-        first_name: formData.FirstName,
-        email: formData.Email,
-        last_name: formData.LastName,
-        avatar: 'sin image',
-        resolved: formData.resolved
-      }))
+      store.dispatch(
+        addUser({
+          id: Math.random() * 1000,
+          first_name: formData.FirstName,
+          email: formData.Email,
+          last_name: formData.LastName,
+          avatar: "sin image",
+          resolved: formData.resolved,
+        })
+      );
 
       setFormData({
         FirstName: "",
